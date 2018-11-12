@@ -67,6 +67,20 @@ $(function() {
      * clicked and does it hide when clicked again.
      */
 
+    describe('The menu', function() {
+
+        it('menu is hidden by default', function() {
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+        });
+
+        it('display and hide menu on click', function() {
+            $('.menu-icon-link').click();
+            expect($('body').hasClass('menu-hidden')).toBe(false);
+            $('.menu-icon-link').click();
+            expect($('body').hasClass('menu-hidden')).toBe(true);
+        });
+    });
+
     /* TODO: Write a new test suite named "Initial Entries" */
 
     /* TODO: Write a test that ensures when the loadFeed
